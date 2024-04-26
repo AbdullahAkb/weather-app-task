@@ -110,19 +110,6 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ],
                       ),
-                      Row(
-                        children: [
-                          Icon(
-                            Icons.keyboard_arrow_down_rounded,
-                            color: AppColors.whiteColor.withOpacity(0.5),
-                          ),
-                          Text(
-                            "See Details",
-                            style: TextStyle(
-                                color: AppColors.whiteColor.withOpacity(0.5)),
-                          )
-                        ],
-                      )
                     ],
                   ),
                   SizedBox(
