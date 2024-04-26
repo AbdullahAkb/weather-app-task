@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:weather_app_task/presentation/home_screen/widgets/app_bar_widget.dart';
 import 'package:weather_app_task/presentation/home_screen/widgets/detail_props_widget.dart';
+import 'package:weather_app_task/presentation/home_screen/widgets/hourly_temp_widget.dart';
 import 'package:weather_app_task/utils/app_colors.dart';
 import 'package:weather_app_task/utils/app_dimensions.dart';
 
@@ -130,11 +131,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      // DetailPropsWidget(
-                      //   propIcon: Icon(Icons.keyboard_arrow_down_rounded),
-                      //   propsName: "Humidity",
-                      //   value: 26,
-                      // ),
                       DetailPropsWidget(
                         propIcon: Icon(Icons.air_rounded,
                             color: AppColors.whiteColor),
@@ -155,6 +151,37 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ],
                   ),
+                  SizedBox(
+                    height: AppDimensions.height(context) * 0.02,
+                  ),
+                  const Align(
+                    alignment: Alignment.topLeft,
+                    child: Text("Hourly",
+                        style: TextStyle(color: AppColors.greyColor)),
+                  ),
+                  SizedBox(
+                    height: AppDimensions.height(context) * 0.02,
+                  ),
+                  Column(
+                    children: [
+                      const HourlyTempWidget(),
+                      SizedBox(
+                        height: AppDimensions.height(context) * 0.02,
+                      ),
+                      const HourlyTempWidget(),
+                      SizedBox(
+                        height: AppDimensions.height(context) * 0.02,
+                      ),
+                      const HourlyTempWidget(),
+                      SizedBox(
+                        height: AppDimensions.height(context) * 0.02,
+                      ),
+                      const HourlyTempWidget(),
+                      SizedBox(
+                        height: AppDimensions.height(context) * 0.02,
+                      ),
+                    ],
+                  )
                 ],
               ),
             ),
